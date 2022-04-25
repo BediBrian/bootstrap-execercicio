@@ -45,3 +45,20 @@ npm install bootstrap-social@5.1.1 --save
 //*HTML*//
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+
+npm install -g less@2.7.2
+
+    Next, go to the CSS folder on your machine and rename the styles.css file that you have there as styles-old.css. This is to save the CSS file that we have been using so far. We will be creating a new styles.css file by compiling the Less file.
+    cd css
+    Next type the following at the command prompt to compile the Less file into a CSS file:
+    lessc styles.less styles.css
+
+//*Installing and using the node-sass module*//
+
+npm install --save-dev node-sass@4.7.2
+
+    Next open your package.json file and add the following line into the scripts object there.  This adds a script to enable the compilation of the Scss file into a CSS file:
+    "scss": "node-sass -o css/ css/"
+
+    In order to transform the Scss file to a CSS file, type the following at the prompt:
+    npm run scss
