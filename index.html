@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a href="#loginModal" class="abrirModal"> <!-- Bootstrap: data-toggle="modal" data-target="#loginModal"-->
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -46,9 +46,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <a href="#loginModal" type="button" class="close fecharModal"> <!--data-dismiss="modal"-->
                         &times;
-                    </button>
+                    </a>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <a href="#loginModal" type="button" class="btn btn-secondary btn-sm ml-auto fecharModal">Cancel</a> <!--Bootstrap: data-dismiss="modal"-->
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -85,9 +85,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <a href="#reserveatable" type="button" class="close fecharModal"> <!--Bootstrap: data-dismiss="modal"-->
                         &times;
-                    </button>
+                    </a>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -140,6 +140,9 @@
                         </div>
                         <div class="form-group row">
                             <div class="offset-md-2 col-md-10">
+                                <a href="#reserveatable" type="button" class="btn btn-secondary ml-auto fecharModal">
+                                    Cancel
+                                </a>
                                 <button type="submit" class="btn btn-primary">
                                     Reserve
                                 </button>
@@ -162,7 +165,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a data-toggle="modal" data-target="#reserveatable" type="button" class="btn btn-warning col-12 col-md-8">
+                    <a href="#reserveatable" type="button" class="abrirModal btn btn-warning col-12 col-md-8"> <!--Bootstrap: data-toggle="modal" data-target="#reserveatable"-->
                         <strong>Reserve a Table</strong> 
                     </a>
                 </div>
@@ -326,6 +329,19 @@
                     $('#carouselButton').children('span').removeClass('fa-play');
                     $('#carouselButton').children('span').addClass('fa-pause')
                 }
+            });
+
+            //Eu que fiz *--*
+
+            $('.abrirModal').click(function(e){
+                e.preventDefault(); //cancela o comportamento padrão do link
+                let ide = $(this).attr('href'); //armazena o atributo href do link (id)
+                $(ide).modal('show');
+            });
+            $('.fecharModal').click(function(e){
+                e.preventDefault(); //cancela o comportamento padrão do link
+                let ide = $(this).attr('href'); //armazena o atributo href do link (id)
+                $(ide).modal('hide');
             });
         });
 
