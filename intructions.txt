@@ -62,3 +62,17 @@ npm install --save-dev node-sass@4.7.2
 
     In order to transform the Scss file to a CSS file, type the following at the prompt:
     npm run scss
+
+npm install --save-dev onchange@3.3.0 parallelshell@3.0.2
+
+    Then, add the following two script items to package.json:
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+
+    You will also update the start script as follows:
+    "start": "npm run watch:all",
+
+    Tive que trocar o parallelshell@3.0.2, porque estava dando problemas e instalar a versão anterior
+    
+    npm uninstall --save-dev parallelshell@3.0.2
+    npm install --save-dev parallelshell@3.0.1
