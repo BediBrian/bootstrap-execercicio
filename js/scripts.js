@@ -13,17 +13,5 @@ $(document).ready(function(){
             $('#carouselButton').children('span').addClass('fa-pause')
         }
     });
-
-    //Eu que fiz *--*
-
-    $('.abrirModal').click(function(e){
-        e.preventDefault(); //cancela o comportamento padrão do link
-        let ide = $(this).attr('href'); //armazena o atributo href do link (id)
-        $(ide).modal('show');
-    });
-    $('.fecharModal').click(function(e){
-        e.preventDefault(); //cancela o comportamento padrão do link
-        let ide = $(this).attr('href'); //armazena o atributo href do link (id)
-        $(ide).modal('hide');
-    });
 });
+

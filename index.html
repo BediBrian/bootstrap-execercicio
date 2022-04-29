@@ -8,10 +8,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
 
     <title>Ristorante Con Fusion</title>
 </head>
@@ -32,7 +34,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a href="#loginModal" class="abrirModal"> <!-- Bootstrap: data-toggle="modal" data-target="#loginModal"-->
+                    <a data-toggle="modal" data-target="#loginModal">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -46,7 +48,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <a href="#loginModal" type="button" class="close fecharModal"> <!--data-dismiss="modal"-->
+                    <a type="button" class="close" data-dismiss="modal">
                         &times;
                     </a>
                 </div>
@@ -70,7 +72,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <a href="#loginModal" type="button" class="btn btn-secondary btn-sm ml-auto fecharModal">Cancel</a> <!--Bootstrap: data-dismiss="modal"-->
+                            <a type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</a>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -85,9 +87,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <a href="#reserveatable" type="button" class="close fecharModal"> <!--Bootstrap: data-dismiss="modal"-->
+                    <button type="button" class="close" data-dismiss="modal">
                         &times;
-                    </a>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -140,7 +142,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="offset-md-2 col-md-10">
-                                <a href="#reserveatable" type="button" class="btn btn-secondary ml-auto fecharModal">
+                                <a type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">
                                     Cancel
                                 </a>
                                 <button type="submit" class="btn btn-primary">
@@ -165,7 +167,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a href="#reserveatable" type="button" class="abrirModal btn btn-warning col-12 col-md-8"> <!--Bootstrap: data-toggle="modal" data-target="#reserveatable"-->
+                    <a type="button" class="btn btn-warning col-12 col-md-8" data-toggle="modal" data-target="#reserveatable">
                         <strong>Reserve a Table</strong> 
                     </a>
                 </div>
@@ -311,10 +313,12 @@
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
